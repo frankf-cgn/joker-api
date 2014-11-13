@@ -33,11 +33,9 @@ module JokerAPI
         response = perform_request('domain-register', options.merge(:domain => domain))
         return false unless response.success?
 
-        # We wait to make sure the request has been fully processed before returning
-        wait_for_result(response) do |result|
-          return result["Object-Name"] == domain
-        end
+        response.proc_id
       end
+
     end
   end
 end

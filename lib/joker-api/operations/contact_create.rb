@@ -64,9 +64,7 @@ module JokerAPI
         response = perform_request('contact-create', fields)
         return false unless response.success?
 
-        wait_for_result(response) do |result|
-          result["Object-Name"]
-        end
+        response.proc_id
       end
     end
   end

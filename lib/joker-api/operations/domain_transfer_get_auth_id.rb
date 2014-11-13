@@ -5,16 +5,9 @@ module JokerAPI
         response = perform_request('domain-transfer-get-auth-id', :domain => domain)
         return false unless response.success?
 
-        wait_for_result(response) do |result|
-          if result["Object-Name"] == domain
-            if result["body"] =~ /The Authorization ID is: "([^"]+)"/
-              return $1
-            else
-              return false
-            end
-          end
-        end
+        response.proc_id
       end
+
     end
   end
 end
