@@ -1,6 +1,10 @@
 # JokerAPI
 
-TODO: Write a gem description
+Client to register domains with swiss based joker.com (EIS AG)
+
+## Changes of this fork
+
+Streamlined the API to return the proc_id for the _create requests.
 
 ## Installation
 
@@ -18,7 +22,16 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+   require 'joker-api'
+
+### Contact list example
+
+   client = JokerAPI::Client.new('example_username', 'example_password'
+   client.login
+   client.query_contact_list('*de*',{:extended => true})
+
+
+TODO: Write more usage instructions here
 
 ## Contributing
 
