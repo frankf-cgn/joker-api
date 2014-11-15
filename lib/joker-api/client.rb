@@ -123,6 +123,7 @@ module JokerAPI
     include Operations::DomainRegister
     include Operations::DomainRenew
     include Operations::DomainTransferIn
+    include Operations::DomainTransferInReseller
     include Operations::DomainTransferGetAuthId
 
     include Operations::DomainLock
