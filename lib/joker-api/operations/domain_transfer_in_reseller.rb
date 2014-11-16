@@ -19,7 +19,7 @@ module JokerAPI
       # @option options [Integer] :period Renewal period in months. (Currently ignored.)
       # @option options [Boolean] :autorenew (true) Sets the autorenew option on the domain. Default imposed by Joker.com.
       # @option options [Array<String>] :ns_list List of nameservers to set on the domain
-      def domain_transfer_in(domain, auth_key, options = {})
+      def domain_transfer_in_reseller(domain, auth_key, options = {})
         options.assert_valid_keys(OPTIONS)
         options = options.dup
         command = 'domain-transfer-in-reseller'
