@@ -12,7 +12,8 @@ module JokerAPI
     autoload :DomainRegister,       File.expand_path('../operations/domain_register.rb', __FILE__)
     autoload :DomainRenew,          File.expand_path('../operations/domain_renew.rb', __FILE__)
     autoload :DomainTransferIn,     File.expand_path('../operations/domain_transfer_in.rb', __FILE__)
-    autoload :DomainTransferGetAuthId, File.expand_path('../operations/domain_transfer_get_auth_id.rb', __FILE__)
+    autoload :DomainTransferInReseller, File.expand_path('../operations/domain_transfer_in_reseller.rb', __FILE__)
+    autoload :DomainTransferGetAuthId,  File.expand_path('../operations/domain_transfer_get_auth_id.rb', __FILE__)
 
     autoload :DomainLock,           File.expand_path('../operations/domain_lock.rb', __FILE__)
     autoload :DomainUnlock,         File.expand_path('../operations/domain_unlock.rb', __FILE__)
