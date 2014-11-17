@@ -27,7 +27,7 @@ module JokerAPI
         # Currently ignored, Joker.com says to leave it empty
         options.delete(:period)
 
-        options["owner-c"] = options.delete(:tech_c)
+        options["owner-c"] = options.delete(:owner_c)
         options["admin-c"] = options.delete(:admin_c)
         options["tech-c"] = options.delete(:tech_c)
         options["billing-c"] = options.delete(:billing_c)
